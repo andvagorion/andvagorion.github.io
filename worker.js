@@ -2,7 +2,7 @@ var version = 'v1::';
 var CACHE_NAME = 'andvagorion.github.io';
 var urlsToCache = [
   '/',
-  'index.html',
+  '/index.html',
   '/index_offline.html'
 ];
 
