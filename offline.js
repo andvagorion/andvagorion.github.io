@@ -4,7 +4,7 @@
   if ('serviceWorker' in navigator) {
     console.log('ServiceWorker registration in progress.');
     navigator.serviceWorker.register('worker.js').then(function() {
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      console.log('ServiceWorker registration successful.');
     }, function(err) {
       console.log('ServiceWorker registration failed: ', err);
     });
