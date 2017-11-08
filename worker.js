@@ -30,11 +30,12 @@ self.addEventListener('fetch', function(event) {
     return;
   }
 
-  event.respondWith(
+  event.respondWith(async function() {
 
     console.log(event.request);
 
-    caches.match(event.request)
+    caches
+    .match(event.request)
     .then(function(response) {
       // Cache hit - return response
       if (response) {
@@ -44,12 +45,13 @@ self.addEventListener('fetch', function(event) {
         event.request,
         {
           credentials: 'include'
-        });
-      }
-    )
-  );
-});
+        }
+      );
+    });
 
+  });
+
+});
 
 /* The activate event fires after a service worker has been successfully installed.
 It is most useful when phasing out an older version of a service worker, as at
