@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <title>JavaScript - Einstiegsaufgaben</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm">
+
+        <div class="card bg-light mt-4">
+          <div class="card-header">
+            <h1>JavaScript - Einstiegsaufgaben</h1>
+          </div>
+          <div class="card-body">
+
+            <h2>Katzen, so viele Katzen</h2>
+            <p>Gib 100 Katzen (<code>=^.^=</code>) und einen Hund (<code>ˁ˚ᴥ˚ˀ</code>) auf der Konsole aus.</p>
+            <pre><code>
+              function outputString(str, howManyTimes) {
+                for (...) {
+                  console.log(...)
+                }
+              }
+            </code></pre>
+
+            <h2>Alter in Sekunden</h2>
+            <p>Wie viele Sekunden warst du um Mitternacht deines letztens Geburtstags alt?</p>
+            <pre><code>
+              function ageInSeconds(age) {
+                var seconds = ...
+                return seconds;
+              }
+            </code></pre>
+
+            <h2>Summe oder Dreifache Summe</h2>
+            <p>Schreibe eine Funktion, die die Summe zweier Zahlen berechnet. Wenn die Zahlen gleich sind, verdreifache die Summe.</p>
+            <pre><code>
+              function sumOrTripleSum(n1, n2) {
+                if (...) {
+                  return ...
+                } else {
+                  return ...
+                }
+              }
+            </code></pre>
+
+            <h2>Größte Zahl</h2>
+            <p>Schreibe eine Funktion, die die größte Zahl eines Arrays findet.</p>
+            <pre><code>
+              function largest(numbers) {
+                var largest = 0;
+                for (...) {
+
+                }
+                return largest;
+              }
+            </code></pre>
+
+            <h2>Primzahlen finden</h2>
+            <p>Schreibe eine Funktion, die alle Primzahlen zwischen 0 und einer Zahl n in einem Array zurückgibt.</p>
+            <pre><code>
+              function primes(n) {
+                var primes = [];
+                for (...) {
+                  if (isPrime(i)) {
+                    primes.push(i);
+                  }
+                }
+                return primes;
+              }
+
+              function isPrime(i) {
+                ...
+              }
+            </code></pre>
+
+            <h3>Weitere Übungen</h3>
+            <ul>
+              <li><a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercises.php" target="_blank">JavaScript basic [130 exercises with solution]</a></li>
+              <li><a href="https://www.w3resource.com/javascript-exercises/javascript-functions-exercises.php" target="_blank">JavaScript functions [29 exercises with solution]</a></li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  $("pre code").each(function(){
+    var html = $(this).html();
+    var pattern = html.match(/\s*\n[\t\s]*/);
+    $(this).html(html.replace(new RegExp(pattern, "g"),'\n'));
+  });
+  </script>
+
+</body>
+</html>
