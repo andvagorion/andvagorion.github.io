@@ -48,6 +48,7 @@ $(document).ready(function() {
 	
 	jQuery.getJSON("http://raw.githubusercontent.com/andvagorion/andvagorion.github.io/master/nevernudes.json", function(graph) {
 
+		console.log("test");
 		document.body.innerHTML = RandomNudes.create(graph);
 
 	});
