@@ -44,7 +44,7 @@ var RandomNudes = (function() {
 })();
 
 $(document).ready(function() {
-	jQuery.getJSON("http://raw.githubusercontent.com/andvagorion/andvagorion.github.io/master/nevernudes.json", function(graph) {
+	jQuery.getJSON("https://raw.githubusercontent.com/andvagorion/andvagorion.github.io/master/nevernudes.json", function(graph) {
 		
 		for (let i = 0; i < 25; i++) {
 			let ul = document.createElement("ul");
