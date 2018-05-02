@@ -11,7 +11,7 @@ var RandomNudes = (function() {
 			_word = randomFrom(graph[_author]["words"][_word]);
 		}
 		
-		return _author + ": " + _message.join(" ");
+		return { author: _author, message: _message.join(" "), color: graph[_author]["color"]};
 	}
 
 	function randomFrom(obj) {
@@ -38,18 +38,33 @@ var RandomNudes = (function() {
 	}
 	
 	return {
-		init: init,
 		create: create
 	}
 
 })();
 
 $(document).ready(function() {
-	
 	jQuery.getJSON("http://raw.githubusercontent.com/andvagorion/andvagorion.github.io/master/nevernudes.json", function(graph) {
+		
+		for (let i = 0; i < 25; i++) {
+			let ul = document.createElement("ul");
 
-		console.log("test");
-		document.body.innerHTML = RandomNudes.create(graph);
+			let msg = RandomNudes.create(graph);
+			let li = document.createElement("li");
+			let author = document.createElement("div");
+			author.className = "author";
+			author.innerHTML = msg.author;
+			
+			author.style.color = "" + msg.color;
+			li.appendChild(author);
+
+			let message = document.createElement("div");
+			message.innerHTML = msg.message;
+			li.appendChild(message);
+
+			ul.appendChild(li);
+			document.body.appendChild(ul);
+		}
 
 	});
 
