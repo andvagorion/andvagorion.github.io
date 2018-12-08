@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>d3-cellular-automata</title>
+  <meta name="description" content="Visualizing cellular automata with D3.js">
+  <meta name="author" content="Stefan Gaertner">
+
+  <link rel="stylesheet" type="text/css" href="css/rules.css" />
+
+  <script src="js/d3.min.js" type="text/javascript"></script>
+  <script src="js/d3-transition.min.js" type="text/javascript"></script>
+  <script src="js/util.js" type="text/javascript"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+</head>
+<body>
+
+  <div id="rules"></div>
+
+  <div class="container fixed-right fade-in">
+    <div class="button" id="randomInput">Randomize!</div>
+    <div class="button" id="createSVG">Save as SVG!</div>
+  </div>
+
+  <div class="container fixed-right fade-in expandable">
+    <img src="img/gear.svg" class="icon" />
+    <div class="content hidden">
+      <span class="switch" id="wrapAround"></span> Wrap around?
+    </div>
+  </div>
+
+  <script src="js/rules.js" type="text/javascript"></script>
+
+</body>
+</html>
