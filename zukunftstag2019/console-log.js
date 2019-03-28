@@ -1,7 +1,7 @@
 (function(){
     var oldLog = console.log;
     console.log = function (message) {
-        document.body.innerHTML = message;
+        document.body.innerHTML += message;
         oldLog.apply(console, arguments);
     };
 })();
