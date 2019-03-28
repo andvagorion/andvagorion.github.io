@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<title>Zukunftstag - Große Datenmengen</title>
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-sm">
+
+				<div class="card bg-light mt-4">
+					<div class="card-header">
+						<h1>JavaScript - Größere Datenmengen</h1>
+					</div>
+					<div class="card-body">
+
+						<h2>JSON-Daten</h2>
+						<p>Die Filme liegen als Datensätze in einer JSON-Datei vor:</p>
+						<ul>
+							<li><a href="https://raw.githubusercontent.com/andvagorion/andvagorion.github.io/master/movies.json" target="_blank">JSON-Datei</a></li>
+						</ul>
+
+												<h3>Aufgaben</h3>
+												<ul class="list-group">
+
+													<li class="list-group-item">Wie viele Filme befinden sich in der Datenbank? <a data-toggle="collapse" href="#lengthHints" class="float-right">Tipps</a>
+														<div id="lengthHints" class="collapse">
+															<ul>
+																<li>Google: "Länge JavaScript Array"</li>
+															</ul>
+														</div>
+													</li>
+
+													<li class="list-group-item">Auflistung aller Filmtitel <a data-toggle="collapse" href="#titleHints" class="float-right">Tipps</a>
+														<div id="titleHints" class="collapse">
+															<ul>
+																<li>Loop über alle Filme</li>
+																<li>Ausgabe in der Konsole: <code>console.log(...)</code></li>
+															</ul>
+														</div>
+													</li>
+
+													<li class="list-group-item">Aus welchem Jahr ist der neueste Film? <a data-toggle="collapse" href="#listHints" class="float-right">Tipps</a>
+														<div id="listHints" class="collapse">
+															<ul>
+																<li>Variable <code>year</code>, um Jahr zu speichern erstellen: <code>var year = 0</code></li>
+																<li>Loop über alle Filme</li>
+																<li>Prüfen, ob Jahr des aktuellen Films größer ist als das in <code>year</code> gespeicherte Jahr</li>
+																<li>Falls ja: Variable <code>year</code> mit dem neuen Jahr setzen</li>
+															</ul>
+														</div>
+													</li>
+
+													<li class="list-group-item">In wie vielen Filmen spielt Nicolas Cage mit? <a data-toggle="collapse" href="#cageHints" class="float-right">Tipps</a>
+														<div id="cageHints" class="collapse">
+															<ul>
+																<li>Erstellen einer Zähl-Variablen: <code>var count = 0</code></li>
+																<li>Loop über alle Filme</li>
+																<li>Schauspieler*innen sind im Attribut <code>cast</code> aufgelistet: <code>movie["cast"]</code></li>
+																<li>Prüfen, ob Nicolas Cage mitspielt: <a href="https://www.w3schools.com/jsref/jsref_indexof.asp" target="_blank">String.indexOf</a></li>
+																<li>Falls ja: Zähl-Variable hochzählen</li>
+															</ul>
+														</div>
+													</li>
+
+													<li class="list-group-item">Welche Genres werden mehr als 100 Mal verwendet? <a data-toggle="collapse" href="#genreHints" class="float-right">Tipps</a>
+														<div id="genreHints" class="collapse">
+															<ul>
+																<li>Erstellen eines Objekts, das die verwendete Anzahl eines Genres hält: <code>var genreCount = {}</code></li>
+																<li>Loop über alle Filme</li>
+																<li>Genres sind für jeden Film komma-getrennt</li>
+																<li>Aufsplitten eines Strings: <a href="https://www.w3schools.com/jsref/jsref_split.asp" target="_blank"><code>Array.split</code></a></li>
+															</ul>
+														</div>
+													</li>
+
+												</ul>
+												<p></p>
+
+						<h3>Schema</h3>
+						<p>Die Filme sind in einem Array (<code>[]</code>) mit Objekten (<code>{}</code>) gespeichert.</p>
+						<pre><code>
+							[{
+								"title": "127 Hours",
+								"year": 2010,
+								"director": "Danny Boyle",
+								"cast": "James Franco, Amber Tamblyn, Kate Mara, Clémence Poésy, Lizzy Caplan",
+								"genre": "Biography, Drama"
+							},
+							{
+								...
+							}]
+						</code></pre>
+
+						<h3>Laden der Daten</h3>
+						<pre><code>
+							jQuery.getJSON("https://raw.githubusercontent.com/andvagorion/andvagorion.github.io/master/movies.json", function(movies) {
+								console.log(movies);
+								...
+							});
+						</code></pre>
+
+						<h3>Arbeiten mit Objekten</h3>
+						Loop:
+						<pre><code>
+							for (var key in movies) {
+								var movie = data[key];
+
+								console.log(movie.title);
+								// oder
+								console.log(movie["title"]);
+							}
+						</code></pre>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+	$("pre code").each(function(){
+		var html = $(this).html();
+		var pattern = html.match(/\s*\n[\t\s]*/);
+		$(this).html(html.replace(new RegExp(pattern, "g"),'\n'));
+	});
+	</script>
+
+</body>
+</html>

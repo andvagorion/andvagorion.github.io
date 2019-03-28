@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <title>JavaScript - Einstiegsaufgaben</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm">
+
+        <div class="card bg-light mt-4">
+          <div class="card-header">
+            <h1>Feedback-Formular</h1>
+          </div>
+          <div class="card-body">
+
+            <h2>Anleitung</h2>
+			<p></p>
+			<p>Link zum Fiddle: <a href="https://jsfiddle.net/andvagorion/qvchn1e8/">Feedback-Formular</a></p>
+			
+            <p>Den Link aufrufen und oben auf <span style="background: #1c2128; color: white; padding: 2px 5px 5px 5px; line-height: 30px"><svg style="height: 16px; vertical-align: middle; position: relative; top: -1px;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shuffle"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg> Fork</span> klicken.</p>
+			
+			<h3>Radio-Button</h3>
+			<p>Ein Radio-Button ermöglicht eine Auswahl zwischen verschiedenen Werten.</p>
+			<p>Das <b>name</b>-Attribut der Radio-Buttons gibt an, zu welcher Auswahl die Buttons gehören.</p>
+            <pre><code>
+				&#x3C;input name=&#x22;note-mathe&#x22; type=&#x22;radio&#x22; value=&#x22;1&#x22;&#x3E;
+				&#x3C;input name=&#x22;note-mathe&#x22; type=&#x22;radio&#x22; value=&#x22;2&#x22;&#x3E;
+				&#x3C;input name=&#x22;note-mathe&#x22; type=&#x22;radio&#x22; value=&#x22;3&#x22;&#x3E;
+				&#x3C;input name=&#x22;note-mathe&#x22; type=&#x22;radio&#x22; value=&#x22;4&#x22;&#x3E;
+				&#x3C;input name=&#x22;note-mathe&#x22; type=&#x22;radio&#x22; value=&#x22;5&#x22;&#x3E;
+				&#x3C;input name=&#x22;note-mathe&#x22; type=&#x22;radio&#x22; value=&#x22;6&#x22;&#x3E;
+            </code></pre>
+			
+            <h3>Input-Label</h3>
+			<p>Zu einem Input-Element kann ein Label erstellt werden, über das das Input-Element ausgewählt werden kann. Die Attribute <b>for</b> und <b>id</b> müssen dabei gleich sein.
+            <pre><code>
+				&#x3C;label for=&#x22;cat&#x22;&#x3E;Katze&#x3C;/label&#x3E;
+				&#x3C;input id=&#x22;cat&#x22; type=&#x22;radio&#x22; name=&#x22;favorite-animal&#x22; value=&#x22;cat&#x22;&#x3E;
+            </code></pre>
+			
+			<h3>Tabellen</h3>
+			<p>Mit Hilfe des <b>table</b>-Elements kann eine Tabelle erzeugt werden.</p>
+			<p>Der Kopfteil der Tabelle wird durch <b>thead</b> markiert, der Körperteil durch <b>tbody</b></p>
+			<p>Jede Zeile / row wird dabei durch ein <b>tr</b>-Element repräsentiert.</p>
+			<p>Kopfzellen sind <b>th</b>-Elemente, Körperzellen sind <b>td</b>-Elemente.</p>
+            <pre><code>
+&#x3C;table&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;th&#x3E;Tier&#x3C;/th&#x3E;
+      &#x3C;th&#x3E;Name&#x3C;/th&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;Hund&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;Bello&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;Katze&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;Felicitas&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;
+            </code></pre>
+
+            <h3>Links</h3>
+            <ul>
+				<li><a href="https://wiki.selfhtml.org/wiki/HTML/Formulare" target="_blank">selfhtml: HTML/Formulare (deutsch)</a></li>
+				<li><a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">w3c: HTML Forms (englisch)</a></li>
+				<li><a href="https://wiki.selfhtml.org/wiki/CSS/Tutorials/Einstieg" target="_blank">selfhtml: Einstieg in CSS</a></li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  $("pre code").each(function(){
+    var html = $(this).html();
+    var pattern = html.match(/\s*\n[\t\s]*/);
+    $(this).html(html.replace(new RegExp(pattern, "g"),'\n'));
+  });
+  </script>
+
+</body>
+</html>

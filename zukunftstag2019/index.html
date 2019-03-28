@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <title>Zukunftstag - Große Datenmengen</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm">
+
+        <div class="card bg-light mt-4">
+          <div class="card-header">
+            <h1>Vormittag: JavaScript-Aufgaben</h1>
+          </div>
+          <div class="card-body">
+
+            <ul>
+              <li><a href="aufgaben.html">Einstiegsaufgaben</a></li>
+              <li><a href="datenmengen.html">Umgang mit größeren Datenmengen</a></li>
+            </ul>
+
+          </div>
+
+        </div>
+		
+	  </div>
+	</div>
+	
+	<div class="row">
+	  <div class="col-sm">
+		
+		<div class="card bg-light mt-4">
+          <div class="card-header">
+            <h1>Nachmittag: Feedback-Formular</h1>
+          </div>
+          <div class="card-body">
+
+            <ul>
+              <li><a href="feedback.html">Anleitung</a></li>
+            </ul>
+
+          </div>
+
+        </div>
+		
+      </div>
+	</div>
+	  
+    <div class="row">
+      <div class="col-sm">
+
+        <div class="card bg-light mt-4">
+          <div class="card-header">
+            <h1>Online-Ressourcen</h1>
+          </div>
+          <div class="card-body">
+
+            <ul>
+              <li><a href="//google.com" target="_blank">Google ;)</a></li>
+              <li><a href="https://www.w3schools.com/js/default.asp" target="_blank">W3C JavaScript-Tutorials</a></li>
+              <li><a href="https://developer.mozilla.org/bm/docs/Web/JavaScript" target="_blank">MDN JavaScript-Tutorials</a></li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  $("pre code").each(function(){
+    var html = $(this).html();
+    var pattern = html.match(/\s*\n[\t\s]*/);
+    $(this).html(html.replace(new RegExp(pattern, "g"),'\n'));
+  });
+  </script>
+
+</body>
+</html>
